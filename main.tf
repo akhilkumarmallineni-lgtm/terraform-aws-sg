@@ -1,6 +1,6 @@
 resource "aws_security_group" "main" {
   name        = var.sg_name
-  vpc_id      = aws_vpc.main.id
+  vpc_id      = var.vpc_id
   description = "Allow traffic for ${var.sg_name} project ${var.project} in ${var.environment}"
 
   egress {
