@@ -1,9 +1,9 @@
-locals {
-  common_name = "${var.project}-${var.environment}-${var.sg_name}"
-  common_tags = {
-      Name        = local.common_name
-      Project     = var.project
-      Terraform   = true
-      Environment = var.environment
-  }
+locals{
+    common_name = "${var.project}-${var.environment}-${var.sg_name}"
+    common_tags = {
+        Project = var.project
+        Environment = var.environment
+        Terraform = "true"
+        Name = local.common_name
+    }
 }
